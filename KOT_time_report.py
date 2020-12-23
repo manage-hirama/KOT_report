@@ -408,7 +408,7 @@ st.title('Report - King of Time')
 
 option = st.sidebar.selectbox(
     'Please select the month to display',
-    ('見たい月を選択してね','6月','7月','8月','9月','10月','11月'))
+    ('report月を選択してね','6月','7月','8月','9月','10月','11月'))
 
 if option == '6月':
     st.write('jun_DataFrame')
