@@ -1,5 +1,0 @@
-streamlit
-pandas
-glob
-matplotlib.pyplot
-japanize_matplotlib
