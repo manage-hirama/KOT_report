@@ -415,8 +415,8 @@ if option == '6月':
     st.dataframe(df06_mix)
 
     fig = plt.figure(figsize=(12,5), dpi=300)
-    plt.bar(labels06, volume06, width=0.8, color='darkcyan', label='単価制')
-    plt.bar(labels06, volume06_2, width=0.8, color='coral', label='時間制', bottom=volume06)
+    plt.bar(labels06, volume06, width=0.4, align='edge', color='darkcyan', label='単価制')
+    plt.bar(labels06, volume06_2, width=0.4, align='center', color='coral', label='時間制')
     plt.legend()
     plt.title('6月拠点別計')
     plt.xlabel('拠点')
@@ -439,8 +439,8 @@ elif option == '7月':
     st.dataframe(df07_mix)
 
     fig= plt.figure(figsize=(12,5), dpi=300)
+    plt.bar(labels07, volume07, width=0.4, align='edge', color='darkcyan', label='単価制')
     plt.bar(labels07, volume07_2, width=0.4, align='center', color='coral', label='時間制')
-    plt.bar(labels07, volume07_2, width=0.8, color='coral', label='時間制', bottom=volume06)
     plt.legend()
     plt.title('7月拠点別計')
     plt.xlabel('拠点')
