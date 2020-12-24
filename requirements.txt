@@ -1,5 +1,5 @@
 streamlit
 pandas
 glob
-matplotlib
+matplotlib.pyplot
 japanize_matplotlib
