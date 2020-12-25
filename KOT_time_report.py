@@ -319,22 +319,22 @@ df_m5 = pd.merge(df_m4, df_m3, left_index = True, right_index = True, how = 'out
 
 
 #時間外を合算した場合の数値目視
-df06_mix = df06_OK.drop(['6月差額'], axis=1)
+df06_mix = df06_OK
 df06_mix.loc['columns_total'] = df06_mix.sum(numeric_only=True, axis=0)
 
-df07_mix = df07_OK.drop(['7月差額'], axis=1)
+df07_mix = df07_OK
 df07_mix.loc['columns_total'] = df07_mix.sum(numeric_only=True, axis=0)
 
-df08_mix = df08_OK.drop(['8月差額'], axis=1)
+df08_mix = df08_OK
 df08_mix.loc['columns_total'] = df08_mix.sum(numeric_only=True, axis=0)
 
-df09_mix = df09_OK.drop(['9月差額'], axis=1)
+df09_mix = df09_OK
 df09_mix.loc['columns_total'] = df09_mix.sum(numeric_only=True, axis=0)
 
-df10_mix = df10_OK.drop(['10月差額'], axis=1)
+df10_mix = df10_OK
 df10_mix.loc['columns_total'] = df10_mix.sum(numeric_only=True, axis=0)
 
-df11_mix = df11_OK.drop(['11月差額'], axis=1)
+df11_mix = df11_OK
 df11_mix.loc['columns_total'] = df11_mix.sum(numeric_only=True, axis=0)
 
 
@@ -409,7 +409,9 @@ option = st.sidebar.selectbox(
 if option == '6月':
     st.write('jun_DataFrame')
     st.dataframe(df06_mix)
+    st.dataframe(df06mt)
     
+
     fig = plt.figure(figsize=(12,5), dpi=300)
     plt.bar(labels06, volume06, width=0.4, align='edge', color='darkcyan', label='単価制')
     plt.bar(labels06, volume06_2, width=0.4, align='center', color='coral', label='時間制')
@@ -432,6 +434,7 @@ if option == '6月':
 elif option == '7月':
     st.write('july_DataFrame')
     st.dataframe(df07_mix)
+    st.dataframe(df07mt)
 
     fig= plt.figure(figsize=(12,5), dpi=300)
     plt.bar(labels07, volume07, width=0.4, align='edge', color='darkcyan', label='単価制')
@@ -455,6 +458,7 @@ elif option == '7月':
 elif option == '8月':
     st.write('august_DataFrame')
     st.dataframe(df08_mix)
+    st.dataframe(df08mt)
 
     fig = plt.figure(figsize=(12,5), dpi=300)
     plt.bar(labels08, volume08, width=0.4, align='edge', color='darkcyan', label='単価制')
@@ -480,6 +484,7 @@ elif option == '8月':
 elif option == '9月':
     st.write('september_DataFrame')
     st.dataframe(df09_mix)
+    st.dataframe(df09mt)
 
     fig = plt.figure(figsize=(12,5), dpi=300)
     plt.bar(labels09, volume09, width=0.4, align='edge', color='darkcyan', label='単価制')
@@ -503,7 +508,8 @@ elif option == '9月':
 
 elif option == '10月':
     st.write('october_DataFrame')
-    st.dataframe(df09_mix)
+    st.dataframe(df10_mix)
+    st.dataframe(df10mt)
 
      
     fig = plt.figure(figsize=(12,5), dpi=300)
@@ -528,6 +534,7 @@ elif option == '10月':
 elif option == '11月':
     st.write('november_DataFrame')
     st.dataframe(df11_mix)
+    st.dataframe(df11mt)
 
     fig = plt.figure(figsize=(12,5), dpi=300)
     plt.bar(labels11, volume11, width=0.4, align='edge', color='darkcyan', label='単価制')
