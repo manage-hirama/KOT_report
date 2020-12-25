@@ -4,6 +4,8 @@ import glob as gb
 import matplotlib.pyplot as plt
 import japanize_matplotlib
 
+echo "backend: TkAgg" >> ~/.matplotlib/matplotlibrc
+
 import_folder_path06x = 'C:\\Users\\yhres\\Dropbox (株式会社　Ｍａｎａｇｅ)\\NK人事\\000_給与計算\\999999-移行_時間管理★★\\200620\\単価計算'
 import_folder_path06y = 'C:\\Users\\yhres\\Dropbox (株式会社　Ｍａｎａｇｅ)\\NK人事\\000_給与計算\\999999-移行_時間管理★★\\200620\\時間計算'
 import_folder_path07x = 'C:\\Users\\yhres\\Dropbox (株式会社　Ｍａｎａｇｅ)\\NK人事\\000_給与計算\\999999-移行_時間管理★★\\200720\\単価計算'
@@ -445,6 +447,7 @@ elif option == '7月':
     plt.ylabel('金額')
     plt.xticks(rotation=45)
     st.pyplot(fig)
+
     fig=plt.figure(figsize=(12,5), dpi=300)
     plt.bar(labels07, volume07, width=0.8, color='darkcyan', label='単価制')
     plt.bar(labels07, volume07_2, width=0.8, color='coral', label='時間制', bottom=volume07)
@@ -521,6 +524,7 @@ elif option == '10月':
     plt.ylabel('金額')
     plt.xticks(rotation=45)
     st.pyplot(fig)
+
     fig = plt.figure(figsize=(12,5), dpi=300)
     plt.bar(labels10, volume10, width=0.8, color='darkcyan', label='単価制')
     plt.bar(labels10, volume10_2, width=0.8, color='coral', label='時間制', bottom=volume10)
@@ -546,7 +550,7 @@ elif option == '11月':
     plt.xticks(rotation=45)
     st.pyplot(fig)
      
-    
+
     fig = plt.figure(figsize=(12,5), dpi=300)
     plt.bar(labels11, volume11, width=0.8, color='darkcyan', label='単価制')
     plt.bar(labels11, volume11_2, width=0.8, color='coral', label='時間制', bottom=volume11)
