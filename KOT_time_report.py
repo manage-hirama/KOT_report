@@ -4,6 +4,7 @@ import glob as gb
 import matplotlib.pyplot as plt
 import japanize_matplotlib
 
+
 import_folder_path06x = 'C:\\Users\\yhres\\Dropbox (株式会社　Ｍａｎａｇｅ)\\NK人事\\000_給与計算\\999999-移行_時間管理★★\\200620\\単価計算'
 import_folder_path06y = 'C:\\Users\\yhres\\Dropbox (株式会社　Ｍａｎａｇｅ)\\NK人事\\000_給与計算\\999999-移行_時間管理★★\\200620\\時間計算'
 import_folder_path07x = 'C:\\Users\\yhres\\Dropbox (株式会社　Ｍａｎａｇｅ)\\NK人事\\000_給与計算\\999999-移行_時間管理★★\\200720\\単価計算'
